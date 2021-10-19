@@ -2,7 +2,7 @@ const path = require("path");
 require("dotenv").config();
 
 module.exports = {
-  env: "development", // production
+  env: process.env.NODE_ENV,
   config: path.resolve(
     "src",
     "schemas",

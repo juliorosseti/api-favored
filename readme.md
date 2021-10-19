@@ -16,7 +16,7 @@ A linguagem usada para o desenvolvimento foi Node, utilizando o framework Expres
 
 ```bash
 curl --request GET \
-     --url 'http://localhost:3333/favoreds?page=1&orderByKey=cpf&orderBy=DESC' \
+     --url 'https://api-favored.herokuapp.com/favoreds?page=1&orderByKey=cpf&orderBy=DESC' \
      --header 'Content-Type: application/json'
 ```
 
@@ -26,7 +26,7 @@ curl --request GET \
 
 ```bash
 curl --request GET \
-     --url 'http://localhost:3333/favoreds?search=julio' \
+     --url 'https://api-favored.herokuapp.com/favoreds?search=julio' \
      --header 'Content-Type: application/json'
 ```
 
@@ -34,7 +34,7 @@ curl --request GET \
 
 ```bash
 curl --request POST \
-     --url http://localhost:3333/favoreds \
+     --url https://api-favored.herokuapp.com/favoreds \
      --header 'Content-Type: application/json' \
      --data '{
          "name": "julio",
@@ -54,7 +54,7 @@ curl --request POST \
 
 ```bash
 curl --request PUT \
-     --url http://localhost:3333/favoreds/20a2bbfc-3e5c-43e1-9191-4870f6ae167e \
+     --url https://api-favored.herokuapp.com/favoreds/20a2bbfc-3e5c-43e1-9191-4870f6ae167e \
      --header 'Content-Type: application/json' \
      --data '{
          "name": "julio",
@@ -74,7 +74,7 @@ curl --request PUT \
 
 ```bash
 curl --request DELETE \
-     --url http://localhost:3333/favoreds \
+     --url https://api-favored.herokuapp.com/favoreds \
      --header 'Content-Type: application/json' \
      --data '{
          "uuid": ["8f116857-5110-4cbb-ba75-208ff096e134"]

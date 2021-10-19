@@ -1,8 +1,12 @@
-# <img src="http://abneroliveira.eti.br/wp-content/uploads/2020/01/nodejs-logo-png-node-js-development-296.png" height="150" alt="NodeJS logo">
+<p align="center">
+  <img src="http://abneroliveira.eti.br/wp-content/uploads/2020/01/nodejs-logo-png-node-js-development-296.png" height="150" alt="NodeJS logo">
+</p>
+
+---
 
 API desenvolvida para fins de estudo/teste, onde é necessário gerenciar uma base de Favorecidos em REST.
 
-A aplicação foi estruturada com padrões SOLID e organizada com modelo `package by feature`
+A aplicação foi estruturada com padrões SOLID e organizada com modelo `package by feature`.
 
 A linguagem usada para o desenvolvimento foi Node, utilizando o framework Express. Também foi utilizado TypeScript & MySQL como database.
 

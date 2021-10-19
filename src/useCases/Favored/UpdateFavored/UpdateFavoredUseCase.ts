@@ -2,7 +2,6 @@ import { IFavoredRepository } from "../../../repositories/IFavoredRepository"
 import { IUpdateFavoredRequestDTO } from "./IUpdateFavoredRequestDTO"
 
 import {
-    separator,
     validateRequiredFields,
     validateRequiredCpfOrCnpj,
     validateLengthCpfOrCnpj,
@@ -47,7 +46,7 @@ export class UpdateFavoredUseCase {
 
     makeValidateByStatusValid(favored: IUpdateFavoredRequestDTO): void {
         if (!favored.email) {
-            throw new Error(`Campos obrigatórios: ${separator}${fields}`);
+            throw new Error(`Campos obrigatórios: E-mail`);
         }
     }
 

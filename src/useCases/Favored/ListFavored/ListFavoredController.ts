@@ -9,12 +9,15 @@ export class ListFavoredController {
 
     async handle(request: Request, response: Response): Promise<Response> {
         try {
-            const page: number = request.query.page ? parseInt(request.query.page) : 1;
+
+            request;
+
+            const page: number = request.query.page ? parseInt(request.query.page as string) : 1;
             const limit: number = 10;
             const offset: number = 0 + (page - 1) * limit;
-            const search: string = request.query.search ? request.query.search : "";
-            const orderBy: string = request.query.orderBy ? request.query.orderBy : "ASC";
-            const orderByKey: string = request.query.orderByKey ? request.query.orderByKey : "name";
+            const search: string = request.query.search ? request.query.search as string : "";
+            const orderBy: string = request.query.orderBy ? request.query.orderBy as string : "ASC";
+            const orderByKey: string = request.query.orderByKey ? request.query.orderByKey as string : "name";
 
             await this.listFavoredUseCase.execute({
                 limit,

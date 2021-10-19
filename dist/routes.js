@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const CreateFavored_1 = require("./useCases/Favored/CreateFavored");
+const ListFavored_1 = require("./useCases/Favored/ListFavored");
+const UpdateFavored_1 = require("./useCases/Favored/UpdateFavored");
+const DeleteFavored_1 = require("./useCases/Favored/DeleteFavored");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.post("/favoreds", (req, res) => CreateFavored_1.createFavoredController.handle(req, res));
+router.get("/favoreds", (req, res) => ListFavored_1.listFavoredController.handle(req, res));
+router.put("/favoreds/:uuid", (req, res) => UpdateFavored_1.updateFavoredController.handle(req, res));
+router.delete("/favoreds/", (req, res) => DeleteFavored_1.deleteFavoredController.handle(req, res));

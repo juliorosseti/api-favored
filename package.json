@@ -6,7 +6,8 @@
   "scripts": {
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "build": "tsc --build"
   },
   "keywords": [],
   "author": "",

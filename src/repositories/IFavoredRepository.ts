@@ -10,6 +10,7 @@ interface ListFavored {
 
 export interface IFavoredRepository {
     findByUuid(uuid: string): Promise<Favored>
+    delete(uuid: []): Promise<void>
     update(uuid: string, favored: Favored): Promise<Favored>
     save(favored: Favored): Promise<Favored>
     index(params: ListFavored): Promise<any>

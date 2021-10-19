@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteFavoredController = exports.deleteFavoredUseCase = void 0;
+const FavoredRepository_1 = require("../../../repositories/implementations/Sequelize/FavoredRepository");
+const DeleteFavoredUseCase_1 = require("./DeleteFavoredUseCase");
+const DeleteFavoredController_1 = require("./DeleteFavoredController");
+const sequelizeFavoredRepository = new FavoredRepository_1.SequelizeFavoredRepository();
+const deleteFavoredUseCase = new DeleteFavoredUseCase_1.DeleteFavoredUseCase(sequelizeFavoredRepository);
+exports.deleteFavoredUseCase = deleteFavoredUseCase;
+const deleteFavoredController = new DeleteFavoredController_1.DeleteFavoredController(deleteFavoredUseCase);
+exports.deleteFavoredController = deleteFavoredController;

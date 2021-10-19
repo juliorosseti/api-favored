@@ -1,6 +1,5 @@
 export interface ICreateFavoredRequestDTO {
     // Person
-    uuid: string
     name: string
     email: string
     cpf: string
@@ -14,5 +13,4 @@ export interface ICreateFavoredRequestDTO {
     bankAccountType: string
     bankAccountNumber: string
     bankAccountDigit: string
-
 }

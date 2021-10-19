@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.listFavoredController = exports.listFavoredUseCase = void 0;
+const FavoredRepository_1 = require("../../../repositories/implementations/Sequelize/FavoredRepository");
+const ListFavoredUseCase_1 = require("./ListFavoredUseCase");
+const ListFavoredController_1 = require("./ListFavoredController");
+const sequelizeFavoredRepository = new FavoredRepository_1.SequelizeFavoredRepository();
+const listFavoredUseCase = new ListFavoredUseCase_1.ListFavoredUseCase(sequelizeFavoredRepository);
+exports.listFavoredUseCase = listFavoredUseCase;
+const listFavoredController = new ListFavoredController_1.ListFavoredController(listFavoredUseCase);
+exports.listFavoredController = listFavoredController;

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateFavoredController = exports.updateFavoredUseCase = void 0;
+const FavoredRepository_1 = require("../../../repositories/implementations/Sequelize/FavoredRepository");
+const UpdateFavoredUseCase_1 = require("./UpdateFavoredUseCase");
+const UpdateFavoredController_1 = require("./UpdateFavoredController");
+const sequelizeFavoredRepository = new FavoredRepository_1.SequelizeFavoredRepository();
+const updateFavoredUseCase = new UpdateFavoredUseCase_1.UpdateFavoredUseCase(sequelizeFavoredRepository);
+exports.updateFavoredUseCase = updateFavoredUseCase;
+const updateFavoredController = new UpdateFavoredController_1.UpdateFavoredController(updateFavoredUseCase);
+exports.updateFavoredController = updateFavoredController;

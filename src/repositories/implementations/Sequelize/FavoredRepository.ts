@@ -18,7 +18,7 @@ export class SequelizeFavoredRepository implements IFavoredRepository {
             return false;
         }
 
-        return new Favored(favored);
+        return favored;
     }
 
     async delete(uuid: []): Promise<void> {

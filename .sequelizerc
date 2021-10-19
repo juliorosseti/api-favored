@@ -1,0 +1,12 @@
+const path = require("path");
+
+module.exports = {
+  env: "development", // production
+  config: path.resolve(
+    "src",
+    "schemas",
+    "implementations",
+    "Sequelize",
+    "config.ts"
+  ),
+};
